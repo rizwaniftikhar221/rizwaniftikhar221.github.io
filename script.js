@@ -1,16 +1,3 @@
-const roles = ["Data Analyst", "Business Analyst", "BI Analyst"];
-const roleEl = document.getElementById("roleRotator");
-let roleIndex = 0;
-
-setInterval(() => {
-  roleEl.classList.add("swap");
-  setTimeout(() => {
-    roleIndex = (roleIndex + 1) % roles.length;
-    roleEl.textContent = roles[roleIndex];
-    roleEl.classList.remove("swap");
-  }, 220);
-}, 2400);
-
 const header = document.querySelector(".site-header");
 window.addEventListener("scroll", () => header.classList.toggle("scrolled", window.scrollY > 40), { passive: true });
 
